@@ -1,8 +1,10 @@
 pragma solidity ^0.4.4;
 
-	mapping (address => uint) balances;
+contract Splitter {
 	address public bob;
     address public carol;
+
+	mapping (address => uint) balances;
 
     function Splitter(address bobAddress, address carolAddress) {
         bob = bobAddress;
