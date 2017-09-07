@@ -1,0 +1,183 @@
+{
+  "contract_name": "Splitter",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "Split",
+      "outputs": [
+        {
+          "name": "splitAmount",
+          "type": "uint256"
+        }
+      ],
+      "payable": true,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "accounts",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "carol",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "bob",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "getBalanceBob",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "shareSplit",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "addr",
+          "type": "address"
+        }
+      ],
+      "name": "getBalance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_bob",
+          "type": "address"
+        },
+        {
+          "name": "_carol",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "splitAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "AmountSplitting",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b60405160408061033883398101604052808051919060200180519150505b60008054600160a060020a03808516600160a060020a03199283161790925560018054928416929091169190911790555b50505b6102c8806100706000396000f300606060405236156100805763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166355d842d781146100855780635e5c06e21461009f5780638b930f15146100d0578063c09cec77146100ff578063d734426c1461012e578063e9b22d1c14610153578063f8b2cb4f14610168575b600080fd5b61008d610199565b60405190815260200160405180910390f35b34156100aa57600080fd5b61008d600160a060020a03600435166101da565b60405190815260200160405180910390f35b34156100db57600080fd5b6100e36101ec565b604051600160a060020a03909116815260200160405180910390f35b341561010a57600080fd5b6100e36101fb565b604051600160a060020a03909116815260200160405180910390f35b341561013957600080fd5b61008d61020a565b60405190815260200160405180910390f35b341561015e57600080fd5b610166610227565b005b341561017357600080fd5b61008d600160a060020a036004351661027d565b60405190815260200160405180910390f35b60006002345b046003819055347f6f4cd350f5183f4e290a2960a6f63745d34bdb4036f72e903b2590beabdf5c3a60405160405180910390a3506003545b90565b60026020526000908152604090205481565b600154600160a060020a031681565b600054600160a060020a031681565b60008054600160a060020a03168152600260205260409020545b90565b6003805460008054600160a060020a03908116825260026020526040808320805490940193849055825482168352808320939093559254600180548516835283832080549092019182905554909316815220555b565b600160a060020a0381166000908152600260205260409020545b9190505600a165627a7a72305820a0cc2eb49ed0f0a9da72e343cc740f5abf100d11f203e0809df1daed3b0d7bef0029",
+  "networks": {
+    "43": {
+      "events": {
+        "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "_from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "_to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Transfer",
+          "type": "event"
+        },
+        "0x6f4cd350f5183f4e290a2960a6f63745d34bdb4036f72e903b2590beabdf5c3a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "splitAmount",
+              "type": "uint256"
+            }
+          ],
+          "name": "AmountSplitting",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x1ba0137415e4f5f6689a1e7afc0f77195ea5fc2e",
+      "updated_at": 1504816503646
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1504816503646
+}

@@ -10,7 +10,7 @@ module.exports = {
       port: 8545,
       network_id: 43
     },
-    "ropsten": {
+    "testnet": {
       host: "localhost",
       port: 8545,
       network_id: 3
