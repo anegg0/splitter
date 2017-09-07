@@ -1,38 +1,24 @@
 pragma solidity ^0.4.4;
 
 contract Splitter {
-	address public bob;
-    address public carol;
-	mapping (address => uint) public accounts;
-	uint amountAfterSplit;
-	event AmountSplitting(uint indexed amount, uint indexed splitAmount);
-	// event Halfing(uint256 splitAmount);
+	address owner;
+	uint half;
+	mapping (address => uint) public balances;
+	event AmountSplitting(address recipient1, address recipient2, uint amount);
 
-    function Splitter(address _bob, address _carol) {
-        bob = _bob;
-        carol = _carol;
+    function Splitter() {
+	owner = msg.sender;
 	}
 
-	function Split()
+	function Split(address recipient1, address recipient2)
 	public
 	payable
-	returns(uint splitAmount)
+	returns(bool success)
 	{
-	amountAfterSplit = msg.value / 2;
-	AmountSplitting(msg.value, amountAfterSplit);
-	return amountAfterSplit;
-	}
-
-	function shareSplit() {
-		accounts[bob] = accounts[bob] += amountAfterSplit;
-		accounts[carol] = accounts[carol] += amountAfterSplit;
-	}
-
-	function getBalance(address addr) returns(uint) {
-	return accounts[addr];
-	}
-
-		function getBalanceBob() returns(uint) {
-	return accounts[bob];
+	half = msg.value / 2;
+	balances[recipient1] += half;
+	balances[recipient2] += half;
+	AmountSplitting(recipient1, recipient2, msg.value);
+	return true;
 	}
 }
